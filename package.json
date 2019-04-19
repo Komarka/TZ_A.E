@@ -1,0 +1,32 @@
+{
+  "name": "tz-a.e",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./bin/www",
+  "scripts": {
+    "postinstall": "link-module-alias",
+    "client": "npm run dev --prefix public/front-end",
+    "server": "npm run postinstall && nodenv .",
+    "start": "nodenv ."
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "mongoose": "^5.5.2",
+    "mongoose-update-if-current": "^1.0.3",
+    "morgan": "~1.9.0"
+  },
+  "devDependencies": {
+    "link-module-alias": "^1.2.0",
+    "node-env-run": "^3.0.2"
+  },
+  "_moduleAliases": {
+    "@routes": "routes/",
+    "@middlwares": "middlwares",
+    "@DB": "DB",
+    "@models": "DB/models",
+    "@controllers": "controllers"
+  }
+}
